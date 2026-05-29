@@ -18,13 +18,7 @@ spring:
           uri: lb://INUBE-AUTHENTICATION-SERVICE
           predicates:
             - Path=/api/inube/user/**
-        - id: inube-service
-          uri: lb://INUBE-SERVICE
-          predicates:
-            - Path=/api/inube/service/**
-          filters:
-            - AuthenticationFilter
-        - id: books-service
+        - id: inube-books
           uri: lb://BOOKS-SERVICE
           predicates:
             - Path=/api/inube/books/**
